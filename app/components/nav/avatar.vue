@@ -1,6 +1,8 @@
 <script setup lang="ts"></script>
 <template>
-  <img class="avatar w-10 h-10" src="~/assets/logo.jpg" alt="avatar" />
+  <NuxtLink to="/">
+    <img class="avatar w-10 h-10" src="~/assets/logo.jpg" alt="avatar" />
+  </NuxtLink>
 </template>
 
 <style scoped></style>

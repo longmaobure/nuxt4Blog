@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <index-main />
+  <div></div>
 </template>
 
 <style scoped></style>

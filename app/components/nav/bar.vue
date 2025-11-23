@@ -3,13 +3,13 @@
   <nav>
     <ol class="flex space-x-4">
       <li>
-        <NuxtLink to="/">Home</NuxtLink>
+        <NuxtLink to="/articles">文章</NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/articles">Articles</NuxtLink>
+        <NuxtLink to="/diary">日记</NuxtLink>
       </li>
       <li>
-        <!-- <NuxtLink to="/contact">Contact</NuxtLink> -->
+        <NuxtLink to="/games">游戏</NuxtLink>
       </li>
     </ol>
   </nav>
