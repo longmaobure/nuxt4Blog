@@ -8,11 +8,7 @@ const baseContentFolder = path.join(process.cwd(), 'content');
 const articlesFolder = path.join(baseContentFolder, 'articles');
 
 export default defineEventHandler(() => {
-  console.log('Articles folder path:', articlesFolder);
-
   const fileNames = fs.readdirSync(articlesFolder);
-  console.log('Article files:', fileNames);
-
   const posts = fileNames.map(fileName => {
     // 获取文件名作为文章标题
     const id = fileName.replace(/.md$/, '');

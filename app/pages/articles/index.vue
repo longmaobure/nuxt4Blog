@@ -4,10 +4,10 @@ const route = useRoute();
 const { data } = await useAsyncData(route.path, () => {
   return queryCollection('articles').all();
 });
-console.log(data);
+console.log(data?.value);
 </script>
 <template>
-  <div></div>
+  <div class="articles-content flex items-start justify-center"></div>
 </template>
 
 <style scoped></style>
