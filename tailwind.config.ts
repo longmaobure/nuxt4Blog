@@ -5,7 +5,9 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       colors: {
-        primary: colors.green
+        primary: colors.green,
+        'pulsar-blue': '#2e5bff',
+        'polar-blue': '#8ab4f8'
       }
     }
   }

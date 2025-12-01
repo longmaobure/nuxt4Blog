@@ -8,6 +8,12 @@ export default defineNuxtConfig({
       meta: [{ name: 'description', content: '这是一个 Nuxt4 博客示例' }]
     }
   },
+  // components: [
+  //   {
+  //     path: '~/components/articles',
+  //     pathPrefix: false
+  //   }
+  // ],
   // modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxtjs/tailwindcss'],
   modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/content'],
   css: ['@/assets/css/tailwind.css'],
