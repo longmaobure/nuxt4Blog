@@ -23,9 +23,12 @@ withDefaults(defineProps<IArticleItemProps>(), {
         </h2>
         <div class="ml-2">
           <!-- 可放置阅读数 / 操作按钮 -->
-          <button class="text-sm text-pulsar-blue opacity-90 hover:opacity-100 transition">
+          <nuxt-link
+            class="text-sm text-pulsar-blue opacity-90 hover:opacity-100 transition"
+            :to="path"
+          >
             阅读
-          </button>
+          </nuxt-link>
         </div>
       </div>
 

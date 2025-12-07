@@ -8,6 +8,7 @@ defineProps<IArticlesListProps>();
       v-for="article in list"
       :id="article.id"
       :key="article.id"
+      :path="article.path"
       :date="article?.date"
       :description="article?.description"
       :updated="article?.updated"

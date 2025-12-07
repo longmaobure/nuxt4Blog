@@ -1,7 +1,5 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content';
 // 这里的z, 是zod的简化版本, 只覆盖基础的schema
-// zod:
-console.log(z);
 export default defineContentConfig({
   collections: {
     articles: defineCollection({

@@ -1,7 +1,7 @@
 // nuxt.config.js
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: { enabled: true, hmr: { overlay: true } },
   app: {
     head: {
       title: '我的 Nuxt 博客',
@@ -15,9 +15,24 @@ export default defineNuxtConfig({
   //   }
   // ],
   // modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxtjs/tailwindcss'],
-  modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/content'],
+  modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/icon'],
   css: ['@/assets/css/tailwind.css'],
   pinia: {
     storesDirs: ['./app/stores/**']
+  },
+  content: {
+    build: {
+      markdown: {
+        toc: {
+          title: '大纲',
+          depth: 3,
+          searchDepth: 9
+        }
+      }
+    }
+    // highlight: {
+    //   theme: 'github-light', // 可以换 "github-light", "nord", "dracula"
+    //   preload: ['ts', 'js', 'vue', 'json', 'html', 'css']
+    // }
   }
 });
