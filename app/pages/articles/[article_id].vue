@@ -9,8 +9,10 @@ console.log(page?.value);
 </script>
 <template>
   <div class="flex flex-row">
-    <articles-toc v-if="page?.body.toc" :toc="page.body.toc" />
-    <div class="flex-1 mt-8 prose prose-slate mx-auto lg:prose-lg">
+    <div class="w-64 flex-shrink-0 border-r">
+      <articles-toc v-if="page?.body.toc" :toc="page.body.toc" />
+    </div>
+    <div class="flex-1 px-9 mt-8 prose prose-slate mx-auto lg:prose-lg">
       <content-renderer v-if="page" :value="page" />
     </div>
   </div>

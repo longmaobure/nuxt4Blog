@@ -4,7 +4,7 @@ import type { IArticleProps } from './lib/type';
 defineProps<IArticleProps>();
 </script>
 <template>
-  <aside v-if="toc" class="article-toc">
+  <aside v-if="toc" class="article-toc sticky top-20">
     <h1 v-if="toc.title" class="text-2xl font-bold toc_title text-center">
       {{ toc.title }}
     </h1>
