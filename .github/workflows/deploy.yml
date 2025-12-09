@@ -3,7 +3,7 @@ name: Deploy Nuxt static to GitHub Pages
 on:
   push:
     branches: [master]
-  workflow_dispatch: # 允许手动触发
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -12,25 +12,17 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
-
-      - name: Install deps
-        run: npm ci
-
-      - name: Generate static site
-        run: npm run generate
-
+      - run: npm ci
+      - run: npm run generate
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .output/public
-          # 保留历史（可选）
-          keep_files: false
+          keep_files: false # 关键：每次覆盖整个分支，避免旧文件残留
+          force_orphan: true # 可选：避免历史污染，保证干净快照
