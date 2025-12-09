@@ -1,5 +1,7 @@
 // nuxt.config.js
 export default defineNuxtConfig({
+  app: { baseURL: '/nuxt4blog/' }, // 如果用 user.github.io/仓库名 访问
+  nitro: { preset: 'static' }, // 生成纯静态站点
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true, hmr: { overlay: true } },
   dev: true,
