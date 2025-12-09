@@ -1,6 +1,5 @@
 // nuxt.config.js
 export default defineNuxtConfig({
-  app: { baseURL: '/nuxt4Blog/' },
   nitro: { preset: 'static' }, // 生成纯静态站点
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true, hmr: { overlay: true } },
@@ -11,6 +10,7 @@ export default defineNuxtConfig({
     https: true
   },
   app: {
+    baseURL: '/nuxt4Blog/',
     head: {
       title: '我的 Nuxt 博客',
       meta: [{ name: 'description', content: '这是一个 Nuxt4 博客示例' }]
