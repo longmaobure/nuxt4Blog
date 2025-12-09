@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as n,e as s}from"./Doa5stx0.js";const r={},a={class:"center-absolute text-6xl"};function i(c,t){return n(),o("div",a,"TOTORO")}const d=Object.assign(e(r,[["render",i]]),{__name:"IndexMain"}),x={};function f(c,t){const _=d;return n(),s(_)}const l=e(x,[["render",f]]);export{l as default};
