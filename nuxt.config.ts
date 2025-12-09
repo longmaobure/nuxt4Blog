@@ -2,6 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true, hmr: { overlay: true } },
+  dev: true,
+  devServer: {
+    host: 'localhost',
+    port: 8080, // 修正：port 而不是 prot
+    https: true
+  },
   app: {
     head: {
       title: '我的 Nuxt 博客',
@@ -34,5 +40,21 @@ export default defineNuxtConfig({
     //   theme: 'github-light', // 可以换 "github-light", "nord", "dracula"
     //   preload: ['ts', 'js', 'vue', 'json', 'html', 'css']
     // }
+  },
+  vite: {
+    server: {
+      host: true,
+      port: 8080, // Vite dev server（HMR）端口
+      hmr: {
+        overlay: true
+        // 如果浏览器访问的地址/端口与 vite 实际监听不一致，可显式指定 clientPort
+        // clientPort: 8080
+      },
+      watch: {
+        // 根据需要启用轮询
+        // usePolling: true,
+        // interval: 300
+      }
+    }
   }
 });
